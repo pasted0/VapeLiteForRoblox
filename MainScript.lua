@@ -280,9 +280,16 @@ end
 
 local basePath = "VapeLite/CustomModules"
 local placePath = basePath .. "/" .. tostring(game.PlaceId) .. ".lua"
+
+if not isfile(placePath) then
+    local file = game:HttpGet("https://raw.githubusercontent.com/pasted0/VapeLiteForRoblox/refs/heads/main/CustomModules/" .. tostring(game.PlaceId) .. ".lua")
+    if file ~= "404: Not Found" then
+        writefile(placePath, file)
+    end
+end
+
 local toLoad = isfile(placePath) and placePath or basePath .. "/Universal.lua"
 
-print('[ VAPELITE ]: Loading File: '..tostring(toLoad)
-)
+print('[ VAPELITE ]: Loading File: '..tostring(toLoad))
 
 loadstring(readfile(toLoad))(vapelite)

@@ -8,7 +8,7 @@ end
 
 
 makefolder('VapeLite')
-writefile('VapeLite/MainScript.lua', game:HttpGet("https://raw.githubusercontent.com/pasted0/VapeLiteForRoblox/refs/heads/main/MainScript.lua"))
+writefile('VapeLite/MainScript.lua', game:HttpGet("https://raw.githubusercontent.com/pasted0/vapelite/main/MainScript.lua"))
 makefolder('VapeLite/CustomModules')
 
 

@@ -31,7 +31,6 @@ local function getFilesFromGithubFolder(folder)
 end
 
 makefolder('VapeLite')
-writefile('VapeLite/Init.lua', game:HttpGet("https://raw.githubusercontent.com/pasted0/vapelite/main/Init.lua"))
 writefile('VapeLite/MainScript.lua', game:HttpGet("https://raw.githubusercontent.com/pasted0/vapelite/main/MainScript.lua"))
 makefolder('VapeLite/CustomModules')
 writefile('VapeLite/CustomModules/Universal.lua', game:HttpGet("https://raw.githubusercontent.com/pasted0/vapelite/main/CustomModules/Universal.lua"))
